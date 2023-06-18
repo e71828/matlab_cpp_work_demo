@@ -107,10 +107,10 @@ figure('Name', 'filter_1st_oder_test');
 clf;
 hold on;
 plot(t_arr, y_arr);
-plot(t_arr, y_cpp_arr);
-plot(t_arr, y_chk_arr, '--');
+plot(t_arr, y_cpp_arr, '+');
+plot(t_arr, y_chk_arr, 'diamond');
 plot(t_arr, x_arr, ':', 'LineWidth', 1);
-title('$\frac{Y(s)}{X(s)} = \frac{1}{\tau s + 1}$');
+title('$\frac{Y(s)}{X(s)} = \frac{1}{\tau s + 1}$', Interpreter='latex');
 xlabel('$t$');
 ylabel('$y(t)$');
-legend('$y(t)$', '$y_\mathrm{cpp}(t)$', '$y_\mathrm{analytical}(t)$', 'x(t)', 'Location', 'Best')
+legend('$y(t)$', '$y_\mathrm{cpp}(t)$', '$y_\mathrm{analytical}(t)$', '$x(t)$', 'Location', 'Best',  Interpreter='latex')
